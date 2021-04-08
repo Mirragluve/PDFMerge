@@ -2,14 +2,15 @@
 import org.apache.pdfbox.io.MemoryUsageSetting;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
 
+import javax.sound.midi.ShortMessage;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         try{
             boolean outPut = false;
             boolean fileOrFolder = false;
@@ -17,7 +18,7 @@ public class Main {
             PDFMergerUtility PDFmerger = new PDFMergerUtility();
 
             BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(System.in, StandardCharsets.UTF_8));
+                    new InputStreamReader(System.in));
 
             boolean terminate = false;
 
@@ -103,6 +104,7 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
             System.out.println("Restart application...");
             main(args);
+            System.in.read();
         }
     }
 }
