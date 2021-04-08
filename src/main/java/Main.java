@@ -1,4 +1,3 @@
-package at.azips.pdfmerge;
 
 import org.apache.pdfbox.io.MemoryUsageSetting;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
