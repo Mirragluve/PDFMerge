@@ -24,7 +24,7 @@ public class PdfMerge {
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
 
-        boolean terminate = false;
+        terminate = false;
 
         System.out.println("Console application started");
         System.out.println("INFO: Dont use Umlaut in Path of any file");
@@ -138,6 +138,7 @@ public class PdfMerge {
             System.out.println(pdfCount + " PDF files added");
             return true;
         }
+        System.out.println("Folderpath wrong: " + folderPath);
         return false;
     }
 
